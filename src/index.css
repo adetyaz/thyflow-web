@@ -1,13 +1,100 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+:root{
+  /*color*/
+  --color-white: #FFFFFF;
+  --color-primary: #C77D2D;
+  --color-secondary: #1F4493;
+  --color-text-primary: #051536;
+  --color-text-secondary: #616A7E;
+  --color-light: rgba(0, 0, 0, 0.09);
+  --color-medium: #A2A7B1;
+  --color-light-pink: #FFF1E2;
+  --color-light-blue: #E5EEFF;
+  --color-light-peach: #FFFCD8;
+  --color-light-purple: #F9E2FF;
+
+  /*font sizes*/
+  --large-font: 4rem;
+  --semi-large-font: 3rem;
+  --regular-font: 2rem;
+  --small-font: 1.5rem;
+  --bold: 800;
+
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@font-face {
+  src: url("./assets/fonts/gilroy-extrabold.otf");
+  font-family: 'Gilroy Extrabold', sans-serif;
+}
+
+@font-face {
+  src: url("./assets/fonts/gilroy-light.otf");
+  font-family: 'Gilroy Light', sans-serif;
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html{
+  box-sizing: inherit;
+  font-size: 62.5%;
+}
+
+
+body {
+  background: var(--color-white);
+  font-family: 'Gilroy Light', sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+p{
+  display: block;
+}
+
+h1,
+h2,
+h3,
+h4{
+  font-weight: var(--bold);
+}
+
+h1{
+  font-family: "Gilroy Extrabold", sans-serif;
+  font-size: var(--large-font);
+  color: var(--color-text-primary);
+  text-align: center;
+}
+
+h2{
+  font-size: var(--semi-large-font);
+  color: var(--color-text-primary);
+}
+
+h3{
+  font-size: var(--regular-font);
+}
+
+h4{
+  font-size: var(--small-font);
+  color: var(--color-text-primary);
+  font-weight: var(--bold);
+}
+
+p{
+  font-size: var(--small-font);
+  color: var(--color-text-secondary);
 }

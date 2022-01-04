@@ -1,0 +1,26 @@
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 3rem;
+}
+
+.logo-box{
+    color: var(--color-secondary);
+    font-size: 3rem;
+    font-family: "Gilroy Extrabold", sans-serif;
+    font-weight: 800;
+}
+
+.nav-items{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.nav-items li{
+    color: var(--color-text-primary);
+    list-style: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+}
