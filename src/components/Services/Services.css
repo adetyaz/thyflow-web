@@ -1,5 +1,88 @@
+.services{
+    padding-inline: 6rem;
+}
+
+.services h2{
+    width: 28ch;
+    margin: 3rem 0;
+}
+
 .cards{
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 2rem;
+    padding: 4rem 0;
+}
+
+
+/*check out width types
+*/
+
+.card{
+    width: 40%;
+    height: 30rem;
+    border-radius: 2rem;
+    padding: 4rem 5rem 2rem;
+    position: relative;
+}
+
+.card:nth-child(1){
+    background: var(--color-light-pink);
+}
+.card:nth-child(2){
+    background: var(--color-light-blue)
+}
+.card:nth-child(3){
+    background: var(--color-light-peach)
+}
+.card:nth-child(4){
+    background: var(--color-light-purple)
+}
+
+.card h1{
+    position: absolute;
+    top: -2.5rem;
+    left: 0;
+    right: 0; 
+    font-size: 6rem;
+    color: var(--color-light);
+    font-family: 'Gilroy Extrabold', sans-serif;
+}
+
+.card h3{
+    margin-top: 10rem;
+}
+
+.card h3, .card p {
+    text-align: center;
+}
+
+@media screen and (max-width: 1028px) and (min-width: 768px) {
+    .card{
+        padding: 4rem 2rem 2rem;
+    }
+}
+
+@media screen and (max-width: 850px) and (min-width: 700px) {
+    .cards{
+        flex-wrap: wrap;
+        gap: 4rem;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .cards {
+        flex-direction: column;
+        gap: 4rem;
+    }
+
+    .services h2{
+        width: 100%;
+    } 
+    
+    .card{
+        width: 80%;
+        padding: 4rem 3rem 2rem;
+    }
 }

@@ -1,0 +1,9 @@
+.countdown{
+    padding: 3rem 0;
+}
+
+.countdown-timer{
+    display: block;
+    margin-inline: auto;
+}
+

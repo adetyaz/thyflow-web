@@ -18,6 +18,12 @@ header{
     gap: 2rem;
 }
 
+@media screen and (max-width: 600px){
+    .nav-items{
+        display: none;
+    }
+}
+
 .nav-items li{
     color: var(--color-text-primary);
     list-style: none;

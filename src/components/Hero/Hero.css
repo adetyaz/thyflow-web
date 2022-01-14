@@ -29,3 +29,14 @@ h1 span{
 .hero button{
     margin: 2rem auto;
 }
+
+@media screen and (max-width: 600px){
+    .hero h1, p, .hero-image{
+        width: 100%;
+    }
+
+    .hero p{
+        text-align: center;
+        width: 100%;
+    }
+}

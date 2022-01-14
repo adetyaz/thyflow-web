@@ -2,7 +2,7 @@ import './button.css'
 
 const Button = ({children}) => {
     return (
-      <button>
+      <button type="button">
           {children}
       </button>
     )
