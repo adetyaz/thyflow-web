@@ -6,7 +6,7 @@ const About = () => {
     return(
         <section className="about">
             <div className="about-image">
-                <img src={lightPhone} alt="phone image"/>
+                <img src={lightPhone} alt="phone"/>
             </div>
             <div className="about-text">
                 <h2>Welcome to ThyFlow</h2>

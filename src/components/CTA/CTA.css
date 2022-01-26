@@ -1,0 +1,33 @@
+.cta{
+    padding: 6rem 2rem;
+    position: relative;
+}
+
+.cta div{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 30%;
+    bottom: 0;
+
+}
+
+.cta img{
+    width: 100%;
+}
+
+.cta h2, .cta p {
+    text-align: center;
+    color: var(--color-white);
+}
+
+
+.cta > div button{
+    margin-inline:  auto;
+}
+
+@media screen and (max-width: 850px){
+    .cta h2 {
+        font-size: 2rem;
+    }
+}

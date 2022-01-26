@@ -2,8 +2,49 @@
     padding: 3rem 0;
 }
 
-.countdown-timer{
-    display: block;
-    margin-inline: auto;
+.countdown h3{
+    color: var(--color-secondary);
+    text-align: center;
+    margin: 4rem 0;
 }
 
+.countdown-timer{
+  display: flex;
+   justify-content: center;
+}
+
+.countdown-timer div{
+    border-right: 1px solid var(--color-text-secondary);
+    padding: 2rem 6rem;
+}
+
+.countdown-timer div:last-child{
+    border-right: 0;
+}
+
+.countdown-timer > div h1{
+    font-size: 8rem;
+    font-family: 'Gilroy Light', sans-serif;
+    color: var(--color-primary)
+}
+
+.countdown-timer > div span{
+    color: var(--color-text-secondary);
+    font-size: 1.8rem;
+}
+
+@media screen and (max-width: 850px){
+    .countdown-timer div{
+        padding: 2rem 4rem;
+    }
+}
+
+@media screen and (max-width: 600px){
+    .countdown-timer div{
+        padding: 2rem 2em;
+    }
+
+    .countdown-timer > div h1{
+        font-size: 5rem;
+    }
+}

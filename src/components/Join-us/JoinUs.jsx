@@ -1,6 +1,6 @@
 import './JoinUs.css'
-import lightPhone1 from '../../assets/images/phone image 1.png'
-import lightPhone2 from '../../assets/images/phone image 2.png'
+import lightPhone1 from 'assets/images/phone image 1.png'
+import lightPhone2 from 'assets/images/phone image 2.png'
 
 function JoinUs() {
     return (
@@ -15,8 +15,8 @@ function JoinUs() {
                         <li>We match you with a verified on-demand service provider</li>
                         <li>You sit back & relax. The service gets done.</li>
                     </ul>
-                    <a>Join our beta crew &#62;</a>
-                    <img src={lightPhone1} alt="phone image"/>
+                    <a href="https://www.google.com">Join our beta crew &#62;</a>
+                    <img src={lightPhone1} alt="phone"/>
                 </div>
             </div>
             <div>
@@ -28,8 +28,8 @@ function JoinUs() {
                         <li>Book Service</li>
                         <li>Get Result</li>
                     </ul>
-                    <a>Join our beta crew &#62;</a>
-                    <img src={lightPhone2} alt="phone image"/>
+                    <a href="https://www.google.com">Join our beta crew &#62;</a>
+                    <img src={lightPhone2} alt="phone"/>
                 </div>
             </div>
         </section>

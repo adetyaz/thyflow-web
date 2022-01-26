@@ -1,11 +1,16 @@
 .join-us{
-    padding: 4rem 6rem;
+    padding: 10rem 6rem;
     display: flex;
+    gap: 3rem;
 }
 
 .join-us h2{
     width: 16ch;
     margin: 3rem 0;
+}
+
+.join-us > div{
+    width: 50%;
 }
 
 .join-card:nth-child(2){
@@ -18,7 +23,7 @@
 
 .join-card{
     border-radius: 1.5rem;
-    padding: 3rem 2rem;
+    padding: 3rem 4rem;
     overflow: hidden;
 }
 
@@ -47,17 +52,26 @@
 
 .join-card img{
     position: relative;
-    top: 3.5rem;
+    top: 3rem;
     display: block;
     margin-inline: auto;
 }
+
+.join-card:nth-child(1) img{
+    width: 60%;
+    right: 1rem;
+}
+
+.join-card:nth-child(2) img{
+    width: 78%;
+}
+
 
 @media screen and (max-width: 1200px){
     .join-us{
         gap: 2rem;
     }
 }
-
 
 @media screen and (max-width: 600px){
     .join-us{
@@ -68,7 +82,17 @@
         width: 100%;
     }
 
-    .join-card img{
-        width: 75%;
+    .join-us > div{
+        width: 100%;
     }
+
+    .join-card:nth-child(1) img{
+        width: 80%;
+    
+    }
+    
+    .join-card:nth-child(2) img{
+        width: 100%;
+    }
+
 }

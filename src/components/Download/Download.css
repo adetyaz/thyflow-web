@@ -1,18 +1,19 @@
 .download{
     background: url('../../assets/images/light background.png') no-repeat center;
     background-size: cover;
-    padding: 4rem 4rem;
+    padding: 8rem 4rem 4rem;
     display: flex;
 }
 
-.download h2{
+.download h1{
     color: var(--color-white);
-    width: 25ch;
+    width: 18ch;
     margin: 2rem 0;
+    text-align: left;
 }
 
 .download-options{
-    flex: 0 0 55%;
+    flex: 0 0 50%;
     padding: 2rem 10rem;
 }
 
@@ -22,11 +23,11 @@
 
 .app-stores{
     gap: 2rem;
-    margin-top: 3rem;
+    margin-top: 8rem;
 }
 
-.appstores img{
-    width: 80%;
+.app-stores img{
+    width: 35%;
 }
 
 .app-display img{
@@ -35,13 +36,34 @@
     top: 4rem;
 }
 
+@media screen and (max-width: 850px){
+    .download-options{
+        padding: 2rem 0;
+    }
+
+    .download h1{
+        font-size: 3rem;
+    }
+    
+}
+
 @media screen and (max-width: 600px){
     .download{
         flex-direction: column;
+        background-position: right;
+        background-size: auto;
     }
 
-    .download h2{
-        color: var(--color-white);
+    .download h1{
         width: 100%;
+    }
+
+    .app-stores img{
+        width: 45%;
+    }
+    .app-display img{
+        width: 50%;
+        position: relative;
+        top: 4rem;
     }
 }
