@@ -2,12 +2,13 @@ import Button from 'components/Button/Button';
 import './Header.css'
 
 const Header = () => {
-
+  
   return (
     <header>
       <div className="logo-box">
         THYFLOW
       </div>
+      
       <nav>
         <ul className="nav-items">
           <li>Services</li>
