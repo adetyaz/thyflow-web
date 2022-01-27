@@ -2,7 +2,6 @@ import './Hero.css'
 import Button from 'components/Button/Button'
 import BigPhone from 'assets/images/big-white-phone.png'
 
-
 const Hero = () => {
   return(
     <div className="hero">
