@@ -1,7 +1,6 @@
 import './Hero.css'
 import Button from 'components/Button/Button'
 import BigPhone from 'assets/images/big-white-phone.png'
-import BigPhoneDark from 'assets/images/big-black-phone.png'
 
 const Hero = () => {
   return(
