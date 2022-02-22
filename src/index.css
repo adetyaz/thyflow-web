@@ -13,7 +13,7 @@
   --color-light-purple: #F9E2FF;
 
   /*font sizes*/
-  --large-font: 4rem;
+  --large-font: 5rem;
   --semi-large-font: 3rem;
   --regular-font: 2rem;
   --small-font: 1.5rem;
@@ -104,4 +104,9 @@ h4{
 p{
   font-size: var(--small-font);
   color: var(--color-text-secondary);
+}
+
+.text-wrapper{
+  overflow: hidden;
+  margin-bottom: -2rem;
 }

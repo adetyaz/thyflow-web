@@ -1,24 +1,122 @@
+import React from 'react';
 import './About.css';
 import lightPhone from '../../assets/images/phone image 2.png'
+// import lightPhoneDark from '../../assets/images/phone image 2 dark.png'
+import { motion, useAnimation } from 'framer-motion'
+import { useInView } from "react-intersection-observer";
+import { useEffect } from 'react';
 
+const imageContainer = {
+  hidden: {
+    height: 0,
+    width: 0,
+  },
+  visible: {
+    height: '45rem',
+    width: '45rem',
+    originX: 'center',
+    transition: {
+      duration: 1,
+      ease: 'linear',
+      when: 'beforeChildren',
+    }
+  }
+}
+
+const imageVariants = {
+  hidden: {
+    y: '100%',
+  },
+  visible: {
+    y: 0,
+    transition: {
+      duration: 1,
+      ease: 'easeIn'
+    }
+  }
+}
+
+const textContainer = {
+  hidden: {
+    opacity: 1,
+  },
+  visible:{
+    opacity: 1,
+    transition: {
+      delay: 1,
+      when: 'beforeChildren',
+      staggerChildren: 2.5
+    }
+  }
+}
+
+const textVariants = {
+  hidden: {
+    opacity: 0,
+    x: '-100%'
+  },
+  visible:{
+    opacity: 1,
+    x: 0,
+    transition: {
+      duration: 1,
+      delay: .5,
+    }
+  }
+}
 
 const About = () => {
-    return(
-        <section className="about">
-            <div className="about-image">
-                <img src={lightPhone} alt="phone"/>
-            </div>
-            <div className="about-text">
-                <h2>Welcome to ThyFlow</h2>
-                <h3>..the marketplace for on-demand services.</h3>
-                <p>ThyFlow was created with one simple question in mind:</p>
-                <p>How can we help busy professionals dealing with the stress and hassle that comes with living in big cities save time and maintain their appearance so that they can continue to enjoy life on their terms?</p>
-                <p><span>The solution? </span>... On Demand services, available to you at your convenience.</p>
-                <p>You can now BOOK on-demand service from the comfort of your phone. </p>
-                <p>NO NEED to go to the dry cleaners, barbershop, pet groomers, car wash, etc. Let these services, plus more, come to you.</p>
-            </div>
-        </section>     
-    )
+  const [ref, inView] = useInView()
+  const controls = useAnimation()
+
+  useEffect(() => {
+    if(inView){
+      controls.start('visible')
+    }
+  }, [controls, inView])
+
+  return(
+    <section className="about" ref={ref}>
+      <motion.div className="about-image"
+        variants={imageContainer}
+        initial='hidden'
+        animate='visible'
+      >
+        <motion.img 
+          src={lightPhone} 
+          alt="phone"
+          variants={imageVariants}
+        />
+      </motion.div>
+      <motion.div className="about-text"
+        variants={textContainer}
+        initial='hidden'
+        animate='visible'
+      >
+        <motion.h2
+          variants={textVariants}
+        >Welcome to ThyFlow</motion.h2>
+        <motion.h3
+          variants={textVariants}
+        >..the marketplace for on-demand services.</motion.h3>
+        <motion.p
+          variants={textVariants}
+        >ThyFlow was created with one simple question in mind:</motion.p>
+        <motion.p
+          variants={textVariants}
+        >How can we help busy professionals dealing with the stress and hassle that comes with living in big cities save time and maintain their appearance so that they can continue to enjoy life on their terms?</motion.p>
+        <motion.p
+          variants={textVariants}
+        ><span>The solution? </span>... On Demand services, available to you at your convenience.</motion.p>
+        <motion.p
+          variants={textVariants}
+        >You can now BOOK on-demand service from the comfort of your phone. </motion.p>
+        <motion.p
+          variants={textVariants}
+        >NO NEED to go to the dry cleaners, barbershop, pet groomers, car wash, etc. Let these services, plus more, come to you.</motion.p>
+      </motion.div>
+    </section>     
+  )
 }
 
 export default About

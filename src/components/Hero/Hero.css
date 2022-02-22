@@ -2,9 +2,11 @@
     padding: 5rem 5rem;
 }
 
+
 h1 span{
     color: var(--color-primary);
 }
+
 
 .hero h1{
     width: 25ch;

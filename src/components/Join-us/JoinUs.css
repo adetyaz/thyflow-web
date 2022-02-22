@@ -11,6 +11,7 @@
 
 .join-us > div{
     width: 50%;
+    overflow: hidden;
 }
 
 .join-card:nth-child(2){

@@ -1,10 +1,11 @@
 import './button.css'
+import { motion } from 'framer-motion'
 
-const Button = ({children}) => {
+const Button = ({children, ...props}) => {
     return (
-      <button type="button">
+      <motion.button type="button" {...props}>
           {children}
-      </button>
+      </motion.button>
     )
 }
 export default Button;

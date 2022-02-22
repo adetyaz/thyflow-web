@@ -19,6 +19,7 @@
 
 .app-stores, .app-display{
     display: flex;
+    overflow: hidden;
 }
 
 .app-stores{

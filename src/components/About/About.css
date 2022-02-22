@@ -16,6 +16,10 @@
     position: relative;
 }
 
+.about-image.dark{
+    background: #141B2C
+}
+
 .about-image img{
     width: 78%;
     display: block;
@@ -28,6 +32,7 @@
 
 .about-text{
     flex: 0 0 50%;
+    overflow: hidden;
 }
 
 .about-text h3{

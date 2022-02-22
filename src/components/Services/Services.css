@@ -9,7 +9,7 @@
 
 .cards{
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
     gap: 2rem;
     padding: 4rem 0;
