@@ -76,7 +76,6 @@ const About = () => {
 				className='about-text'
 				variants={textContainer}
 				initial='hidden'
-				animate='visible'
 				whileInView='visible'
 				viewport={{ once: true, amount: 1 }}
 			>
