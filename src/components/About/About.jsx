@@ -38,9 +38,9 @@ const textContainer = {
 	visible: {
 		opacity: 1,
 		transition: {
-			delay: 1,
+			delay: 0.5,
 			when: 'beforeChildren',
-			staggerChildren: 2.5,
+			staggerChildren: 1.5,
 		},
 	},
 }

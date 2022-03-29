@@ -35,7 +35,7 @@ const cardVariants = {
 		opacity: 1,
 		height: '30rem',
 		transition: {
-			duration: 0.8,
+			duration: 0.5,
 			ease: 'linear',
 			when: 'beforeChildren',
 			staggerChildren: 0.5,
@@ -52,7 +52,7 @@ const cardNumberVariants = {
 		top: '-2.5rem',
 		opacity: 1,
 		transition: {
-			duration: 0.5,
+			duration: 0.3,
 			ease: 'linear',
 		},
 	},
@@ -66,7 +66,7 @@ const textVariants = {
 		opacity: 1,
 		scale: [1.1, 1],
 		transition: {
-			duration: 0.5,
+			duration: 0.3,
 			ease: 'easeInOut',
 		},
 	},
