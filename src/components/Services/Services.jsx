@@ -1,6 +1,6 @@
-import React from 'react';
-import './Services.css';
-import { motion } from 'framer-motion';
+import React from 'react'
+import './Services.css'
+import { motion } from 'framer-motion'
 
 const headerVariants = {
 	hidden: {
@@ -11,7 +11,7 @@ const headerVariants = {
 		x: 0,
 		opacity: 1,
 	},
-};
+}
 
 const cardContainer = {
 	hidden: {
@@ -24,7 +24,7 @@ const cardContainer = {
 			staggerChildren: 1,
 		},
 	},
-};
+}
 
 const cardVariants = {
 	hidden: {
@@ -35,13 +35,13 @@ const cardVariants = {
 		opacity: 1,
 		height: '30rem',
 		transition: {
-			duration: 1,
+			duration: 0.8,
 			ease: 'linear',
 			when: 'beforeChildren',
 			staggerChildren: 0.5,
 		},
 	},
-};
+}
 
 const cardNumberVariants = {
 	hidden: {
@@ -52,11 +52,11 @@ const cardNumberVariants = {
 		top: '-2.5rem',
 		opacity: 1,
 		transition: {
-			duration: 1,
+			duration: 0.5,
 			ease: 'linear',
 		},
 	},
-};
+}
 
 const textVariants = {
 	hidden: {
@@ -66,65 +66,65 @@ const textVariants = {
 		opacity: 1,
 		scale: [1.1, 1],
 		transition: {
-			duration: 1,
+			duration: 0.5,
 			ease: 'easeInOut',
 		},
 	},
-};
+}
 
 const Services = () => {
 	return (
 		<section className='services'>
-			<h2
+			<motion.h2
 				variants={headerVariants}
 				initial='hidden'
-				// animate='visible'
 				whileInView='visible'
 				viewport={{ once: true }}
 			>
 				How ThyFlow On-Demand Services Work
-			</h2>
-			<div
+			</motion.h2>
+			<motion.div
 				className='cards'
 				variants={cardContainer}
 				initial='hidden'
-				// animate='visible'
 				whileInView='visible'
-				viewport={{ once: true }}
+				viewport={{ once: true, amount: 1 }}
 			>
-				<div className='card' variants={cardVariants}>
-					<h1 variants={cardNumberVariants}>1</h1>
-					<h3 variants={textVariants}>Download App</h3>
-					<p variants={textVariants}>
+				<motion.div className='card' variants={cardVariants}>
+					<motion.h1 variants={cardNumberVariants}>1</motion.h1>
+					<motion.h3 variants={textVariants}>Download App</motion.h3>
+					<motion.p variants={textVariants}>
 						Sign up to view list of mobile services in your city.
-					</p>
-				</div>
+					</motion.p>
+				</motion.div>
 
-				<div className='card' variants={cardVariants}>
-					<h1 variants={cardNumberVariants}>2</h1>
-					<h3 variants={textVariants}>Choose your On-demand</h3>
-					<p variants={textVariants}>
+				<motion.div className='card' variants={cardVariants}>
+					<motion.h1 variants={cardNumberVariants}>2</motion.h1>
+					<motion.h3 variants={textVariants}>Choose your On-demand</motion.h3>
+					<motion.p variants={textVariants}>
 						service, location, time for service & book!
-					</p>
-				</div>
-				<div className='card' variants={cardVariants}>
-					<h1 variants={cardNumberVariants}>3</h1>
-					<h3 variants={textVariants}>Get matched</h3>
-					<p variants={textVariants}>
+					</motion.p>
+				</motion.div>
+				<motion.div className='card' variants={cardVariants}>
+					<motion.h1 variants={cardNumberVariants}>3</motion.h1>
+					<motion.h3 variants={textVariants}>Get matched</motion.h3>
+					<motion.p variants={textVariants}>
 						with our verified mobile service provider well experience to perform
 						service
-					</p>
-				</div>
-				<div className='card' variants={cardVariants}>
-					<h1 variants={cardNumberVariants}>4</h1>
-					<h3 variants={textVariants}>Friendly, professional vetted</h3>
-					<p variants={textVariants}>
+					</motion.p>
+				</motion.div>
+				<motion.div className='card' variants={cardVariants}>
+					<motion.h1 variants={cardNumberVariants}>4</motion.h1>
+					<motion.h3 variants={textVariants}>
+						Friendly, professional vetted
+					</motion.h3>
+					<motion.p variants={textVariants}>
 						service provider will arrival at your location to perform service.
-					</p>
-				</div>
-			</div>
+					</motion.p>
+				</motion.div>
+			</motion.div>
 		</section>
-	);
-};
+	)
+}
 
-export default Services;
+export default Services

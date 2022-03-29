@@ -1,25 +1,22 @@
-import React from 'react';
-import './About.css';
-import lightPhone from '../../assets/images/phone image 2.png';
+import React from 'react'
+import './About.css'
+import lightPhone from '../../assets/images/phone image 2.png'
 // import lightPhoneDark from '../../assets/images/phone image 2 dark.png'
-import { motion } from 'framer-motion';
+import { motion } from 'framer-motion'
 
 const imageContainer = {
 	hidden: {
-		height: 0,
-		width: 0,
+		scale: 0,
 	},
 	visible: {
-		height: '45rem',
-		width: '45rem',
-		originX: 'center',
+		scale: 1,
 		transition: {
 			duration: 1,
 			ease: 'linear',
 			when: 'beforeChildren',
 		},
 	},
-};
+}
 
 const imageVariants = {
 	hidden: {
@@ -32,7 +29,7 @@ const imageVariants = {
 			ease: 'easeIn',
 		},
 	},
-};
+}
 
 const textContainer = {
 	hidden: {
@@ -46,7 +43,7 @@ const textContainer = {
 			staggerChildren: 2.5,
 		},
 	},
-};
+}
 
 const textVariants = {
 	hidden: {
@@ -61,55 +58,54 @@ const textVariants = {
 			delay: 0.5,
 		},
 	},
-};
+}
 
 const About = () => {
 	return (
 		<section className='about'>
-			<div
+			<motion.div
 				className='about-image'
 				variants={imageContainer}
 				initial='hidden'
-				// animate='visible'
 				whileInView='visible'
-				viewport={{ once: true }}
+				viewport={{ once: true, amount: 1 }}
 			>
-				<img src={lightPhone} alt='phone' variants={imageVariants} />
-			</div>
-			<div
+				<motion.img src={lightPhone} alt='phone' variants={imageVariants} />
+			</motion.div>
+			<motion.div
 				className='about-text'
 				variants={textContainer}
 				initial='hidden'
 				animate='visible'
 				whileInView='visible'
-				viewport={{ once: true }}
+				viewport={{ once: true, amount: 1 }}
 			>
-				<h2 variants={textVariants}>Welcome to ThyFlow</h2>
-				<h3 variants={textVariants}>
+				<motion.h2 variants={textVariants}>Welcome to ThyFlow</motion.h2>
+				<motion.h3 variants={textVariants}>
 					..the marketplace for on-demand services.
-				</h3>
-				<p variants={textVariants}>
+				</motion.h3>
+				<motion.p variants={textVariants}>
 					ThyFlow was created with one simple question in mind:
-				</p>
-				<p variants={textVariants}>
+				</motion.p>
+				<motion.p variants={textVariants}>
 					How can we help busy professionals dealing with the stress and hassle
 					that comes with living in big cities save time and maintain their
 					appearance so that they can continue to enjoy life on their terms?
-				</p>
-				<p variants={textVariants}>
+				</motion.p>
+				<motion.p variants={textVariants}>
 					<span>The solution? </span>... On Demand services, available to you at
 					your convenience.
-				</p>
-				<p variants={textVariants}>
+				</motion.p>
+				<motion.p variants={textVariants}>
 					You can now BOOK on-demand service from the comfort of your phone.{' '}
-				</p>
-				<p variants={textVariants}>
+				</motion.p>
+				<motion.p variants={textVariants}>
 					NO NEED to go to the dry cleaners, barbershop, pet groomers, car wash,
 					etc. Let these services, plus more, come to you.
-				</p>
-			</div>
+				</motion.p>
+			</motion.div>
 		</section>
-	);
-};
+	)
+}
 
-export default About;
+export default About

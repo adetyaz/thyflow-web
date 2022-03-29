@@ -1,8 +1,8 @@
-import React from 'react';
-import './Hero.css';
-import Button from 'components/Button/Button';
-import BigPhone from 'assets/images/big-white-phone.png';
-import { motion } from 'framer-motion';
+import React from 'react'
+import './Hero.css'
+import Button from 'components/Button/Button'
+import BigPhone from 'assets/images/big-white-phone.png'
+import { motion } from 'framer-motion'
 
 const headerVariants = {
 	hidden: {
@@ -17,20 +17,7 @@ const headerVariants = {
 			ease: 'linear',
 		},
 	},
-};
-
-const textVariants = {
-	hidden: {
-		opacity: 0,
-	},
-	visible: {
-		opacity: 1,
-		transition: {
-			duration: 1,
-			ease: 'easeInOut',
-		},
-	},
-};
+}
 
 const buttonVariants = {
 	hidden: {
@@ -45,7 +32,7 @@ const buttonVariants = {
 			ease: 'linear',
 		},
 	},
-};
+}
 
 const imgVariants = {
 	hidden: {
@@ -56,21 +43,21 @@ const imgVariants = {
 		opacity: 1,
 		scale: [1, 0.9, 1],
 	},
-};
+}
 
-const Hero = React.forwardRef((props, ref) => {
+const Hero = () => {
 	return (
-		<section className='hero' ref={ref}>
+		<section className='hero'>
 			<div className='text-wrapper'>
-				<h1 variants={headerVariants} initial='hidden' animate='visible'>
+				<motion.h1 variants={headerVariants} initial='hidden' animate='visible'>
 					Together, we're here to help you save
 					<span> time.</span>
-				</h1>
+				</motion.h1>
 			</div>
-			<p variants={textVariants} initial='hidden' animate='visible'>
+			<motion.p variants={headerVariants} initial='hidden' animate='visible'>
 				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet nunc
 				ultricies sed etiam platea imperdiet.
-			</p>
+			</motion.p>
 
 			<div className='text-wrapper'>
 				<Button variants={buttonVariants} initial='hidden' animate='visible'>
@@ -78,16 +65,17 @@ const Hero = React.forwardRef((props, ref) => {
 				</Button>
 			</div>
 
-			<img
+			<motion.img
 				src={BigPhone}
 				alt='phone'
 				className='hero-image'
 				variants={imgVariants}
 				initial='hidden'
-				animate='visible'
+				whileInView='visible'
+				viewport={{ once: true, amount: 1 }}
 			/>
 		</section>
-	);
-});
+	)
+}
 
-export default Hero;
+export default Hero
